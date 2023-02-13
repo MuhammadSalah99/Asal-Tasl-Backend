@@ -19,9 +19,7 @@ app.use("/buyers", buyerRouter);
 app.use("/reserves", reserveRouter);
 
 const PORT = 3001;
-
-db.sequelize.sync().then(() => {
-  app.listen(process.env.PORT || PORT, () => {
-    console.log("Server is running adasd");
-  });
+app.listen(process.env.PORT || PORT, () => {
+  console.log("Server is running adasd");
 });
+// db.sequelize.sync().then(() => {});
